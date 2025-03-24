@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legitimate Website Guide - CyberSafe</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="../index.html">Home</a>
+        <a href="pc.html" id="lesson1">Password Checker</a>
+        <a href="lw.html" id="lesson2">Legitimate Website Guide</a>
+        <a href="cc.html" id="lesson3">CyberChoices</a>
+        <a href="th.html">Thank You</a>
+    </div>
+
+    <div class="main-content">
+        <h1>How to Identify Legitimate Websites</h1>
+
+        <div class="url-tips">
+            <h2>How to Verify a Website's Legitimacy</h2>
+            
+            <div class="tip-box">
+                <h3>1. Check the URL and Domain Name</h3>
+                <p>Watch out for:</p>
+                <ul>
+                    <li>Typos and misspellings in domain names</li>
+                    <li>Different domain extensions (.com instead of .co.in)</li>
+                    <li>Added hyphens or numbers in familiar brand names</li>
+                </ul>
+                <div class="example">
+                    <p class="real-url">✅ www.irctc.co.in</p>
+                    <p class="fake-url">❌ www.irctc-verify.com</p>
+                    <p class="fake-url">❌ www.1rctc.co.in</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h3>2. Verify Security Features</h3>
+                <ul>
+                    <li>Look for HTTPS and padlock icon in address bar</li>
+                    <li>Check SSL certificate validity</li>
+                    <li>Verify secure payment symbols on shopping sites</li>
+                </ul>
+                <div class="example">
+                    <p class="real-url">✅ https://www.onlinesbi.com</p>
+                    <p class="fake-url">❌ http://www.onlinesbi.secure-verify.com</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h3>3. Examine Website Content</h3>
+                <ul>
+                    <li>Look for privacy policy and terms of service</li>
+                    <li>Check for valid contact information</li>
+                    <li>Watch for poor grammar or spelling errors</li>
+                    <li>Verify company registration details</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>4. Check Trust Indicators</h3>
+                <ul>
+                    <li>Look for verified trust seals</li>
+                    <li>Check customer reviews on independent platforms</li>
+                    <li>Verify social media presence</li>
+                    <li>Research company reputation</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>5. Common Red Flags</h3>
+                <ul>
+                    <li>Deals that seem too good to be true</li>
+                    <li>Pressure to act quickly</li>
+                    <li>Unusual payment methods (like wire transfer only)</li>
+                    <li>Requests for sensitive information via email</li>
+                    <li>Poor website design or broken features</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>6. Government Website Verification</h3>
+                <p>Indian government websites use specific domain extensions:</p>
+                <div class="example">
+                    <p class="real-url">✅ www.incometax.gov.in</p>
+                    <p class="real-url">✅ www.india.gov.in</p>
+                    <p class="fake-url">❌ www.income-tax-india.com</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h3>7. Additional Safety Tips</h3>
+                <ul>
+                    <li>Use bookmarks for frequently visited websites</li>
+                    <li>Don't click links in unsolicited emails</li>
+                    <li>Type URLs directly instead of clicking links</li>
+                    <li>Keep your browser and security software updated</li>
+                    <li>Use multi-factor authentication when available</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quiz-container">
+            <h2>Website Verification Quiz</h2>
+            <p>Look at each image and decide if it shows a legitimate or fake website.</p>
+            <div id="questionContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        const questions=[
+            {
+                image: '../assets/q1.png',
+                title: 'SBI Online Banking Page',
+                description: 'Check this online banking login page carefully.',
+                isReal: false,
+                feedback: 'This is a fake SBI page. Notice the misspelled URL "sbionIine" using capital I instead of l.'
+            },
+            {
+                image: './images/q2.png',
+                title: 'IRCTC Booking Portal',
+                description: 'Examine this IRCTC ticket booking page.',
+                isReal: true,
+                feedback: 'This is the legitimate IRCTC website. Notice the correct URL and security certificate.'
+            },
+            {
+                image: './images/q3.png',
+                title: 'UPI Payment Request',
+                description: 'Look at this UPI payment screen.',
+                isReal: false,
+                feedback: 'This is a fake UPI screen. Notice the suspicious sender name and unusual payment description.'
+            },
+            {
+                image: './images/q4.png',
+                title: 'Income Tax Portal',
+                description: 'Verify this income tax filing portal.',
+                isReal: true,
+                feedback: 'This is the genuine Income Tax portal with correct .gov.in domain.'
+            },
+            {
+                image: './images/q5.png',
+                title: 'Online Shopping Site',
+                description: 'Check this e-commerce website.',
+                isReal: false,
+                feedback: 'This is a fake shopping site. Notice the extremely low prices and HTTP instead of HTTPS.'
+            },
+            {
+                image: './images/q6.png',
+                title: 'Aadhaar Update Portal',
+                description: 'Examine this Aadhaar update page.',
+                isReal: false,
+                feedback: 'This is a fake Aadhaar portal. The correct domain is uidai.gov.in.'
+            },
+            {
+                image: './images/q7.png',
+                title: 'Bank KYC Update',
+                description: 'Verify this KYC update page.',
+                isReal: false,
+                feedback: 'This is a phishing attempt. Banks never ask for KYC updates through such pages.'
+            }
+        ];
+
+        let currenQuestion= 0;
+        let score = 0;
+        function showQuestion(index)
+        {
+            const container = document.getElementById('questionContainer');
+            const question = questions[index];
+            container.innerHTML = `
+                <div class="image-question" style="display:block;">
+                    <h3>Question ${index + 1} of ${questions.length}</h3>
+                    <h4>${question.title}</h4>
+                    <p>${question.description}</p>
+                    <img src="${question.image}" alt="Website Screenshot">
+                    <div class="button-group">
+                        <button class="real-btn" onclick="checkAnswer(true, ${index})">Real Website</button>
+                        <button class="fake-btn" onclick="checkAnswer(false, ${index})">Fake Website</button>
+                    </div>
+                    <div class="feedback"></div>
+                </div>`;
+            cq++;
+        }
+
+        function checkAnswer(userAnswer, questionIndex) {
+            const question = questions[questionIndex];
+            const feedbackDiv = document.querySelector('.feedback');
+            
+            if (userAnswer === question.isReal) {
+                feedbackDiv.textContent = '✅ Correct! ' + question.feedback;
+                feedbackDiv.className = 'feedback correct';
+            } else {
+                feedbackDiv.textContent = '❌ Incorrect. ' + question.feedback;
+                feedbackDiv.className = 'feedback incorrect';
+            }
+            
+            feedbackDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                if (questionIndex < questions.length - 1) {
+                    showQuestion(questionIndex + 1);
+                } else {
+                    container.innerHTML = `
+                        <div class="quiz-complete">
+                            <h3>Quiz Complete!</h3>
+                            <p>Your score: ${score}/${questions.length}</p>
+                            <p>Thank you for completing the lesson!</p>
+                        </div>
+                    `;
+                }
+            }, 2000);
+        }
+        showQuestion(0);
+    </script>
+</body>
+</html>

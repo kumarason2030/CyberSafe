@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Choices Quiz - CyberSafe</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+        <div class="sidebar">
+            <a href="../index.html">Home</a>
+            <a href="pc.html" id="lesson1">Password Checker</a>
+            <a href="lw.html" id="lesson2">Legitimate Website Guide</a>
+            <a href="cc.html" id="lesson3">CyberChoices</a>
+            <a href="th.html">Thank You</a>
+        </div>
+
+    <div class="main-content">
+        <h1>Real CyberCrime Stories</h1>
+        
+        <style>
+            .crime-stories {
+                margin-bottom: 40px;
+                padding: 20px;
+                background-color: #fff3e0;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+            .story-box {
+                background-color: white;
+                padding: 15px;
+                margin: 10px 0;
+                border-left: 4px solid #ff7043;
+                border-radius: 4px;
+            }
+
+            .story-box h3 {
+                color: #d84315;
+                margin-top: 0;
+            }
+
+            .story-box p {
+                color: #424242;
+                margin-bottom: 10px;
+            }
+
+            .loss-amount {
+                color: #d32f2f;
+                font-weight: bold;
+            }
+        </style>
+
+        <div class="crime-stories">
+            <h2>Recent Cybercrime Incidents in India</h2>
+            <p>Read these real stories before taking the quiz to understand how cybercriminals operate:</p>
+
+            <div class="story-box">
+                <h3>The Remote Access Trap</h3>
+                <p>A 65-year-old retired teacher from Chennai lost ₹12 lakhs when a fraudster, posing as a bank executive, convinced her to install a remote access app for "updating KYC". The scammer gained access to her mobile banking and transferred all her retirement savings.</p>
+                <p class="loss-amount">Loss: ₹12,00,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Job Scam</h3>
+                <p>A fresh graduate from Mumbai paid ₹25,000 as "registration fee" for a work-from-home job. The company disappeared after collecting fees from hundreds of job seekers.</p>
+                <p class="loss-amount">Loss: ₹25,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The OLX Fraud</h3>
+                <p>A Delhi resident trying to sell his laptop on OLX was tricked into sharing an OTP that gave scammers access to his UPI account. They emptied his bank account within minutes.</p>
+                <p class="loss-amount">Loss: ₹1,45,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Instagram Identity Theft</h3>
+                <p>A college student's Instagram account was hacked and used to scam her friends by requesting urgent monetary help. Five friends lost money before the scam was discovered.</p>
+                <p class="loss-amount">Loss: ₹75,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Fake Electricity Bill</h3>
+                <p>A Bangalore family received a message about pending electricity bill payment. The fraudster convinced them to download a QR code scanner app, which was actually malware.</p>
+                <p class="loss-amount">Loss: ₹2,50,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Investment Scheme</h3>
+                <p>A group of professionals lost money in a fake cryptocurrency investment scheme that promised 20% monthly returns. The scammers disappeared after collecting investments.</p>
+                <p class="loss-amount">Loss: ₹85,00,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Marriage Portal Scam</h3>
+                <p>A family paid advance fees to a fraudulent matrimonial profile claiming to be an NRI doctor. The scammer disappeared after collecting "visa processing fees".</p>
+                <p class="loss-amount">Loss: ₹5,50,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The UPI Fraud</h3>
+                <p>A shop owner lost money when a customer claimed to have made a payment but actually sent a payment request. The confused owner accepted the request, transferring money to the fraudster.</p>
+                <p class="loss-amount">Loss: ₹15,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Lottery Scam</h3>
+                <p>A housewife was convinced she won a lottery from a popular shopping site. She paid "processing fees" and "taxes" before realizing it was a scam.</p>
+                <p class="loss-amount">Loss: ₹3,25,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Credit Card Fraud</h3>
+                <p>An IT professional shared his credit card details for a "reward points" update. The scammer made multiple international transactions within hours.</p>
+                <p class="loss-amount">Loss: ₹4,80,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Fake Shopping Website</h3>
+                <p>Multiple victims lost money to a fake e-commerce website offering heavy discounts on premium smartphones. The website disappeared after collecting payments.</p>
+                <p class="loss-amount">Loss: ₹32,00,000</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Insurance Scam</h3>
+                <p>An elderly couple was tricked into paying "processing fees" to claim benefits from their expired life insurance policy. The scammer posed as an insurance agent.</p>
+                <p class="loss-amount">Loss: ₹7,50,000</p>
+            </div>
+        </div>
+
+        <h1>Cyber Safety Quiz</h1>
+        <p>Now that you've read these real incidents, test your cyber safety awareness with this quiz:</p>
+
+        <div class="quiz-container">
+            <form id="cyberQuiz">
+                <div class="question" id="q1">
+                    <h3>Scenario 1: Lottery Winner</h3>
+                    <p>You receive a WhatsApp message saying you've won ₹25,00,000 in a lottery you never entered. They ask for your bank details to transfer the money. What would you do?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> Share bank details to receive the money</label>
+                        <label><input type="radio" name="q1" value="b"> Block the number and report as spam</label>
+                        <label><input type="radio" name="q1" value="c"> Ask them for more details about how you won</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q2">
+                    <h3>Scenario 2: Bank Account Block</h3>
+                    <p>You receive an SMS claiming to be from your bank saying your account will be blocked unless you update your KYC by clicking on a link. What's your response?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> Click the link and enter your details</label>
+                        <label><input type="radio" name="q2" value="b"> Call your bank's official helpline to verify</label>
+                        <label><input type="radio" name="q2" value="c"> Forward the SMS to friends to warn them</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q3">
+                    <h3>Scenario 3: Job Offer</h3>
+                    <p>You receive an email offering a work-from-home job with a salary of ₹50,000 per month. They ask for ₹5,000 as registration fee. What would you do?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a"> Pay the registration fee to secure the job</label>
+                        <label><input type="radio" name="q3" value="b"> Ignore and delete the email</label>
+                        <label><input type="radio" name="q3" value="c"> Share the opportunity with friends</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q4">
+                    <h3>Scenario 4: UPI Request</h3>
+                    <p>Someone calls claiming to be from your electricity board, saying your bill payment failed and asks you to approve a pending UPI request. What's your action?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="a"> Approve the UPI request</label>
+                        <label><input type="radio" name="q4" value="b"> Decline and check your bill payment status officially</label>
+                        <label><input type="radio" name="q4" value="c"> Share your UPI PIN to resolve the issue</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q5">
+                    <h3>Scenario 5: OTP Share</h3>
+                    <p>You're selling an item on OLX. The buyer says they'll pay advance but needs the OTP you just received to confirm your account. What do you do?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="a"> Share the OTP to get the payment</label>
+                        <label><input type="radio" name="q5" value="b"> Never share the OTP and end the conversation</label>
+                        <label><input type="radio" name="q5" value="c"> Ask them to send payment first</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q6">
+                    <h3>Scenario 6: KYC Update</h3>
+                    <p>You receive a call from someone claiming to be a bank executive, offering to help update your KYC through a remote access app. What's your response?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="a"> Install the app and follow their instructions</label>
+                        <label><input type="radio" name="q6" value="b"> Decline and visit bank branch personally</label>
+                        <label><input type="radio" name="q6" value="c"> Share your screen to complete the process</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q7">
+                    <h3>Scenario 7: Credit Card Offer</h3>
+                    <p>You receive an SMS about pre-approved credit card with ₹5 lakh limit. They need your Aadhaar and PAN details. What would you do?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="a"> Share the documents to get the card</label>
+                        <label><input type="radio" name="q7" value="b"> Delete the message and block the number</label>
+                        <label><input type="radio" name="q7" value="c"> Call them to negotiate a higher limit</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q8">
+                    <h3>Scenario 8: Free Mobile Recharge</h3>
+                    <p>A website promises free ₹500 mobile recharge if you complete a survey and share it with 10 friends. Your action?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="a"> Complete survey and share with friends</label>
+                        <label><input type="radio" name="q8" value="b"> Ignore and close the website</label>
+                        <label><input type="radio" name="q8" value="c"> Share without completing survey</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q9">
+                    <h3>Scenario 9: Investment Scheme</h3>
+                    <p>Someone adds you to a WhatsApp group promising 20% monthly returns through crypto investment. What's your choice?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="a"> Invest a small amount to try</label>
+                        <label><input type="radio" name="q9" value="b"> Leave the group immediately</label>
+                        <label><input type="radio" name="q9" value="c"> Stay in group to learn more</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="question" id="q10">
+                    <h3>Scenario 10: Online Purchase</h3>
+                    <p>You find a popular smartphone selling at 70% discount on an unknown website. They only accept direct bank transfer. What would you do?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="a"> Make the payment to get the deal</label>
+                        <label><input type="radio" name="q10" value="b"> Avoid the site and buy from authorized sellers</label>
+                        <label><input type="radio" name="q10" value="c"> Share the deal with others</label>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="checkAnswers()">Submit Answers</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'b',
+            q4: 'b',
+            q5: 'b',
+            q6: 'b',
+            q7: 'b',
+            q8: 'b',
+            q9: 'b',
+            q10: 'b'
+        };
+
+        function checkAnswers() {
+            let score = 0;
+            for (let i = 1; i <= 10; i++) {
+                const questionId = `q${i}`;
+                const selected = document.querySelector(`input[name="${questionId}"]:checked`);
+                const feedbackDiv = document.querySelector(`#${questionId} .feedback`);
+                
+                if (selected) {
+                    if (selected.value === correctAnswers[questionId]) {
+                        score++;
+                        feedbackDiv.textContent = "Correct! This is the safe choice.";
+                        feedbackDiv.className = "feedback correct";
+                    } else {
+                        feedbackDiv.textContent = "Incorrect. This could put you at risk of fraud.";
+                        feedbackDiv.className = "feedback incorrect";
+                    }
+                    feedbackDiv.style.display = "block";
+                }
+            }
+            alert(`Your score: ${score}/10\nKeep learning about cyber safety!`);
+        }
+    </script>
+</body>
+</html>

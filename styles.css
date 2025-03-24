@@ -1,0 +1,333 @@
+.sidebar
+        {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            padding-top: 60px;
+            transition: 0.3s;
+        }
+        .sidebar a
+        {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover
+        {
+            color: #f1f1f1;
+            background-color: #333;
+        }
+        .main-content
+        {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+
+        .resource-card {
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 5px solid #2196F3;
+        }
+
+        .emergency-contact {
+            background-color: #ffebee;
+            border-left-color: #d32f2f;
+        }
+
+        .website-link {
+            background-color: #e8f5e9;
+            border-left-color: #388e3c;
+        }
+
+        .final-message {
+            background-color: #fff3e0;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .contact-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .website {
+            color: #1976D2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .website:hover {
+            text-decoration: underline;
+        }
+
+        .password-tips 
+        {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tip-box
+        {
+            border-left: 4px solid #2196F3;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: white;
+        }
+
+        .bad-example
+        {
+            color: #d32f2f;
+        }
+
+        .good-example
+        {
+            color: #388e3c;
+        }
+
+        /* Additional styles for password checker */
+        .password-checker 
+        {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .input-group
+        {
+            margin: 20px 0;
+        }
+
+        .input-group input
+        {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .check-button
+        {
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .check-button:hover
+        {
+            background-color: #1976D2;
+        }
+
+        .result
+        {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .weak
+        {
+            background-color: #ffebee;
+            color: #d32f2f;
+        }
+
+        .medium
+        {
+            background-color: #fff3e0;
+            color: #f57c00;
+        }
+
+        .strong
+        {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .locked {
+            color: #999 !important;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        .lock-icon {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .url-tips
+        {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .tip-box {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #2196F3;
+            border-radius: 4px;
+        }
+
+        .example {
+            font-family: monospace;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .fake-url {
+            color: #d32f2f;
+        }
+
+        .real-url {
+            color: #388e3c;
+        }
+
+        .quiz-container {
+            margin-top: 30px;
+        }
+
+        .image-question {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .website-image {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .real-btn, .fake-btn {
+            padding: 10px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .real-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .fake-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .correct {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .incorrect
+        {
+            background-color: #ffebee;
+            color: #d32f2f;
+        }
+        .quiz-container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .options label {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #e3f2fd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .options label:hover {
+            background-color: #bbdefb;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .correct
+        {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .incorrect {
+            background-color: #ffebee;
+            color: #d32f2f;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #1976D2;
+        }
+        

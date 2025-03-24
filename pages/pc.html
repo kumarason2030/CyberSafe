@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Security - CyberSafe</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="../index.html">Home</a>
+        <a href="pc.html" id="lesson1">Password Checker</a>
+        <a href="lw.html" id="lesson2">Legitimate Website Guide</a>
+        <a href="cc.html" id="lesson3">CyberChoices</a>
+        <a href="th.html">Thank You</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Creating Strong Passwords</h1>
+        
+        <div class="password-tips">
+            <h2>Essential Password Security Tips</h2>
+            
+            <div class="tip-box">
+                <h3>1. Length Matters</h3>
+                <p>Use passwords that are at least 12 characters long. Longer passwords are harder to crack.</p>
+                <p class="bad-example">Weak: cat123</p>
+                <p class="good-example">Strong: WhiskersPurr2024!</p>
+            </div>
+
+            <div class="tip-box">
+                <h3>2. Mix Different Characters</h3>
+                <p>Include a combination of:</p>
+                <ul>
+                    <li>Uppercase letters (A-Z)</li>
+                    <li>Lowercase letters (a-z)</li>
+                    <li>Numbers (0-9)</li>
+                    <li>Special characters (!@#$%^&*)</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>3. Avoid Personal Information</h3>
+                <p>Don't use:</p>
+                <ul>
+                    <li>Your name or birthday</li>
+                    <li>Family members' names</li>
+                    <li>Pet names</li>
+                    <li>Common words from the dictionary</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>4. Use Unique Passwords</h3>
+                <p>Never reuse passwords across different accounts. Each account should have a unique password.</p>
+            </div>
+
+            <div class="tip-box">
+                <h3>5. Regular Updates</h3>
+                <p>Change your passwords every 3-6 months, especially for critical accounts like banking and email.</p>
+            </div>
+        </div>
+
+        <h2>Password Strength Checker</h2>
+        <div class="password-checker">
+            <h2>Password Strength Checker</h2>
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="Enter your password">
+                <button class="check-button" onclick="checkPassword()">Check</button>
+            </div>
+            <div id="strengthResult" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const result = document.getElementById('strengthResult');
+            
+            // Reset previous results
+            result.className = 'result';
+
+            // Check password strength
+            let score = 0;
+            
+            // Length check
+            if (password.length < 8) {
+                result.textContent = 'Weak: Password should be at least 8 characters long';
+                result.classList.add('weak');
+                return;
+            }
+            else
+            {
+                score += password.length > 12 ? 2 : 1;
+            }
+            if (/\d/.test(password))
+            {
+                score++;
+            }
+            if (/[a-z]/.test(password))
+            {
+                score++;
+            }
+            if (/[A-Z]/.test(password))
+            {
+                score++;
+            }
+            if (/[!@#$%^&*(),.?":{}|<>]/.test(password))
+            {
+                score++;
+            }
+            if (score < 3)
+            {
+                result.textContent = 'Weak: Add more variety to your password';
+                result.classList.add('weak');
+            } 
+            else if (score < 4)
+            {
+                result.textContent = 'Medium: Getting better, but could be stronger';
+                result.classList.add('medium');
+            } 
+            else
+            {
+                result.textContent = 'Strong: Great password!';
+                result.classList.add('strong');
+            }
+        }
+    </script>
+</body>
+</html>

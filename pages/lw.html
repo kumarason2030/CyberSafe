@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legitimate Website Guide - CyberSafe</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="D:\VIT CHENNAI\WinterSemester2024-25\CyberSafe\icon.jpg" type="image/x-icon">
 </head>
 <body>
+    <style>
+        .retry-btn
+        {
+            background-color: rgb(15, 117, 15);
+            border: none;
+            height: 45px;
+            width: 95px;
+            color:aliceblue;
+            font-size:large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
     <div class="sidebar">
-        <a href="../index.html">Home</a>
-        <a href="pc.html" id="lesson1">Password Checker</a>
-        <a href="lw.html" id="lesson2">Legitimate Website Guide</a>
-        <a href="cc.html" id="lesson3">CyberChoices</a>
-        <a href="th.html">Thank You</a>
+        <a href="../index.html">Home🏠</a>
+        <a href="pc.html" id="lesson1">Password Checker🔒</a>
+        <a href="lw.html" id="lesson2">Legitimate Website Guide💻</a>
+        <a href="cc.html" id="lesson3">CyberChoices🤔</a>
+        <a href="me.html" id="lesson4">Escape Room🚪</a>
+        <a href="th.html">Thank You💖</a>
     </div>
 
     <div class="main-content">
@@ -108,7 +122,6 @@
             <div id="questionContainer"></div>
         </div>
     </div>
-
     <script>
         const questions=[
             {
@@ -119,42 +132,42 @@
                 feedback: 'This is a fake SBI page. Notice the misspelled URL "sbionIine" using capital I instead of l.'
             },
             {
-                image: './images/q2.png',
+                image: '../assets/q2.png',
                 title: 'IRCTC Booking Portal',
                 description: 'Examine this IRCTC ticket booking page.',
                 isReal: true,
                 feedback: 'This is the legitimate IRCTC website. Notice the correct URL and security certificate.'
             },
             {
-                image: './images/q3.png',
+                image: '../assets/q3.jpg',
                 title: 'UPI Payment Request',
                 description: 'Look at this UPI payment screen.',
                 isReal: false,
                 feedback: 'This is a fake UPI screen. Notice the suspicious sender name and unusual payment description.'
             },
             {
-                image: './images/q4.png',
+                image: '../assets/q4.png',
                 title: 'Income Tax Portal',
                 description: 'Verify this income tax filing portal.',
                 isReal: true,
                 feedback: 'This is the genuine Income Tax portal with correct .gov.in domain.'
             },
             {
-                image: './images/q5.png',
+                image: '../assets/q5.jpg',
                 title: 'Online Shopping Site',
                 description: 'Check this e-commerce website.',
                 isReal: false,
                 feedback: 'This is a fake shopping site. Notice the extremely low prices and HTTP instead of HTTPS.'
             },
             {
-                image: './images/q6.png',
+                image: '../assets/q6.png',
                 title: 'Aadhaar Update Portal',
                 description: 'Examine this Aadhaar update page.',
                 isReal: false,
                 feedback: 'This is a fake Aadhaar portal. The correct domain is uidai.gov.in.'
             },
             {
-                image: './images/q7.png',
+                image: '../assets/q7.jpeg',
                 title: 'Bank KYC Update',
                 description: 'Verify this KYC update page.',
                 isReal: false,
@@ -180,32 +193,47 @@
                     </div>
                     <div class="feedback"></div>
                 </div>`;
-            cq++;
         }
-
         function checkAnswer(userAnswer, questionIndex) {
             const question = questions[questionIndex];
             const feedbackDiv = document.querySelector('.feedback');
             
             if (userAnswer === question.isReal) {
+                score++;
                 feedbackDiv.textContent = '✅ Correct! ' + question.feedback;
                 feedbackDiv.className = 'feedback correct';
             } else {
                 feedbackDiv.textContent = '❌ Incorrect. ' + question.feedback;
                 feedbackDiv.className = 'feedback incorrect';
             }
-            
-            feedbackDiv.style.display = 'block';
-            
+            feedbackDiv.style.display = 'block';     
             setTimeout(() => {
                 if (questionIndex < questions.length - 1) {
                     showQuestion(questionIndex + 1);
-                } else {
-                    container.innerHTML = `
+                } 
+                else
+                {
+                    const percentage = Math.round((score / questions.length) * 100);
+                    let message;
+                    if (percentage >= 80)
+                    {
+                        message = "Excellent! You're very good at spotting fake websites!";
+                    } 
+                    else if (percentage >= 60)
+                    {
+                        message = "Good job! Keep practicing to improve your skills.";
+                    } 
+                    else
+                    {
+                        message = "Keep learning! Review the tips above and try again.";
+                    }   
+                    document.getElementById('questionContainer').innerHTML = `
                         <div class="quiz-complete">
                             <h3>Quiz Complete!</h3>
-                            <p>Your score: ${score}/${questions.length}</p>
-                            <p>Thank you for completing the lesson!</p>
+                            <p>Your score: ${score} out of ${questions.length}</p>
+                            <p>Percentage: ${percentage}%</p>
+                            <p>${message}</p>
+                            <button onclick="location.reload()" class="retry-btn">Try Again</button>
                         </div>
                     `;
                 }

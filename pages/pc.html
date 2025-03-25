@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Security - CyberSafe</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="D:\VIT CHENNAI\WinterSemester2024-25\CyberSafe\icon.jpg" type="image/x-icon">
 </head>
 <body>
     <div class="sidebar">
-        <a href="../index.html">Home</a>
-        <a href="pc.html" id="lesson1">Password Checker</a>
-        <a href="lw.html" id="lesson2">Legitimate Website Guide</a>
-        <a href="cc.html" id="lesson3">CyberChoices</a>
-        <a href="th.html">Thank You</a>
+        <a href="../index.html">Home🏠</a>
+        <a href="pc.html" id="lesson1">Password Checker🔒</a>
+        <a href="lw.html" id="lesson2">Legitimate Website Guide💻</a>
+        <a href="cc.html" id="lesson3">CyberChoices🤔</a>
+        <a href="me.html" id="lesson4">Escape Room🚪</a>
+        <a href="th.html">Thank You💖</a>
     </div>
 
     <div class="main-content">
-        <h1>Creating Strong Passwords</h1>
+        <h1>Creating Strong Passwords is a good practice when making new accounts in new websites!!</h1>
         
         <div class="password-tips">
             <h2>Essential Password Security Tips</h2>
@@ -76,14 +78,8 @@
         function checkPassword() {
             const password = document.getElementById('passwordInput').value;
             const result = document.getElementById('strengthResult');
-            
-            // Reset previous results
             result.className = 'result';
-
-            // Check password strength
             let score = 0;
-            
-            // Length check
             if (password.length < 8) {
                 result.textContent = 'Weak: Password should be at least 8 characters long';
                 result.classList.add('weak');

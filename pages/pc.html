@@ -13,16 +13,12 @@
         <a href="pc.html" id="lesson1">Password Checker🔒</a>
         <a href="lw.html" id="lesson2">Legitimate Website Guide💻</a>
         <a href="cc.html" id="lesson3">CyberChoices🤔</a>
-        <a href="me.html" id="lesson4">Escape Room🚪</a>
         <a href="th.html">Thank You💖</a>
     </div>
-
     <div class="main-content">
-        <h1>Creating Strong Passwords is a good practice when making new accounts in new websites!!</h1>
-        
+        <h1>Creating Strong Passwords is a good practice when making new accounts in new websites!!</h1>       
         <div class="password-tips">
-            <h2>Essential Password Security Tips</h2>
-            
+            <h2>Essential Password Security Tips</h2>         
             <div class="tip-box">
                 <h3>1. Length Matters</h3>
                 <p>Use passwords that are at least 12 characters long. Longer passwords are harder to crack.</p>
@@ -40,8 +36,7 @@
                     <li>Special characters (!@#$%^&*)</li>
                 </ul>
             </div>
-
-            <div class="tip-box">
+        <div class="tip-box">
                 <h3>3. Avoid Personal Information</h3>
                 <p>Don't use:</p>
                 <ul>
@@ -62,7 +57,6 @@
                 <p>Change your passwords every 3-6 months, especially for critical accounts like banking and email.</p>
             </div>
         </div>
-
         <h2>Password Strength Checker</h2>
         <div class="password-checker">
             <h2>Password Strength Checker</h2>
@@ -73,14 +67,15 @@
             <div id="strengthResult" class="result"></div>
         </div>
     </div>
-
     <script>
-        function checkPassword() {
+        function checkPassword()
+        {
             const password = document.getElementById('passwordInput').value;
             const result = document.getElementById('strengthResult');
             result.className = 'result';
             let score = 0;
-            if (password.length < 8) {
+            if (password.length < 8)
+        {
                 result.textContent = 'Weak: Password should be at least 8 characters long';
                 result.classList.add('weak');
                 return;

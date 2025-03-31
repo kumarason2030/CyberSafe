@@ -330,4 +330,358 @@
         .submit-btn:hover {
             background-color: #1976D2;
         }
+        .faq-section {
+            padding: 60px 20px;
+            background-color:black ;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .faq-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color:orange;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: #fff;
+            color: #333;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background:black;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #2ecc71;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            background: #f4f4f4;
+            font-size: 16px;
+            transition: max-height 0.4s ease-in-out;
+        }
+        
+        .faq-answer p {
+            padding: 15px 0;
+            margin: 0;
+            color: #555;
+        }
+        
+        .faq-item.open .faq-answer {
+            max-height: 200px; /* Adjust based on content */
+        }
+        
+        .faq-item.open .faq-question .toggle-icon {
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-icon {
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 20px;
+            background:black;
+            color: #333;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-details {
+            flex: 1 1 40%;
+        }
+        
+        .contact-details h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color:orange;
+        }
+        
+        .contact-details p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color:whitesmoke;
+        }
+        
+        .contact-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-details ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color:whitesmoke;
+        }
+        
+        .contact-form {
+            flex: 1 1 40%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .contact-form textarea {
+            resize: none;
+        }
+        
+        .contact-form button {
+            padding: 10px 20px;
+            background:orangered;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background: orange;
+        }
+        .social-section{
+            font-family: Arial, sans-serif;
+            background-color:black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .social-links {
+            background-color: black;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            text-decoration: none;
+            color:white;
+            border-radius: 50%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .social-icon i {
+            font-size: 24px;
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #fd5949, #d6249f, #285aeb);
+        }
+        
+        .linkedin {
+            background: #0077b5;
+        }
+        
+        .facebook {
+            background:#0077b5;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .recruitment-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color:black;
+            color: whitesmoke;
+            padding: 50px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .recruitment-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 200%;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 0;
+        }
+        
+        .recruitment-content {
+            position: relative;
+            z-index: 1;
+            max-width: 50%; /* Limit width of the text section */
+            text-align: left; /* Align text to the left */
+        }
+        
+        .recruitment-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .recruitment-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .recruitment-btn {
+            background-color:orangered;
+            color:whitesmoke;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .recruitment-btn:hover {
+            background-color:orange;
+            color: whitesmoke;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        .recruitment-image {
+            position: relative;
+            z-index: 1;
+            max-width: 40%; /* Limit width of the image section */
+        }
+        
+        .recruitment-image img {
+            width: 100%; /* Make the image responsive */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color:black;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        
+        .close-btn {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+        
+        .modal-content h2 {
+            margin-top: 0;
+        }
+        
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .modal-content form input,
+        .modal-content form textarea,
+        .modal-content form button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .modal-content form button {
+            background-color:orangered;
+            color:whitesmoke;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .modal-content form button:hover {
+            background-color:orange;
+        }
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
         

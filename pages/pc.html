@@ -6,6 +6,31 @@
     <title>Password Security - CyberSafe</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" href="D:\VIT CHENNAI\WinterSemester2024-25\CyberSafe\icon.jpg" type="image/x-icon">
+    <style>
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .input-group input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+        }
+        .input-group label {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        .check-button {
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
@@ -62,6 +87,9 @@
             <h2>Password Strength Checker</h2>
             <div class="input-group">
                 <input type="password" id="passwordInput" placeholder="Enter your password">
+                <label>
+                    <input type="checkbox" id="togglePassword" onclick="togglePasswordVisibility()"> Show Password
+                </label>
                 <button class="check-button" onclick="checkPassword()">Check</button>
             </div>
             <div id="strengthResult" class="result"></div>
@@ -115,6 +143,12 @@
                 result.textContent = 'Strong: Great password!';
                 result.classList.add('strong');
             }
+        }
+
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('passwordInput');
+            const togglePassword = document.getElementById('togglePassword');
+            passwordInput.type = togglePassword.checked ? 'text' : 'password';
         }
     </script>
 </body>
